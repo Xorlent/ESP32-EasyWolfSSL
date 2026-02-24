@@ -1,6 +1,6 @@
 # ESP32-EasyWolfSSL
 
-Easy-to-use WolfSSL wrapper for ESP32 with WiFiClientSecure API compatibility.
+Easy-to-use WolfSSL wrapper for ESP32 with NetworkClientSecure (aka WiFiClientSecure) API compatibility.
 
 ## Overview
 
@@ -16,11 +16,11 @@ ESP32-EasyWolfSSL provides a drop-in replacement for the standard `WiFiClientSec
 
 ## Features
 
-- ✅ WiFiClientSecure API compatibility
-- ✅ Works seamlessly with HTTPClient
-- ✅ Support for client certificates and private keys
-- ✅ CA certificate validation
-- ✅ PEM and DER format support
+- WiFiClientSecure API compatibility
+- Works seamlessly with HTTPClient
+- Support for client certificates and private keys
+- CA certificate validation
+- PEM and DER format support
 
 ## Installation
 
@@ -256,7 +256,7 @@ client.setCACertDer(ca_cert_der, ca_cert_len);
 ```
 
 #### `void setInsecure()`
-**⚠️ WARNING**: Skip certificate verification. Useful for non-production testing.
+Skips certificate verification. Useful for non-production testing.
 
 ```cpp
 client.setInsecure();  // Not secure. Use only for development.
