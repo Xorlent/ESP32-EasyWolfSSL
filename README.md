@@ -22,6 +22,28 @@ ESP32-EasyWolfSSL provides a drop-in replacement for the standard `WiFiClientSec
 - CA certificate validation
 - PEM and DER format support
 
+## Quick Start
+
+### Minimal Changes Required
+
+Once the library is installed, most code will work with just a header change:
+
+**Before:**
+```cpp
+#include <WiFiClientSecure.h>
+
+WiFiClientSecure client;
+```
+
+**After:**
+```cpp
+#include <WolfSSLClient.h>
+
+WiFiClientSecure client;  // Accepts original name via typedef
+```
+
+**That's it!** The library automatically initializes when you create your first client object.
+
 ## Installation
 
 ### Arduino IDE
